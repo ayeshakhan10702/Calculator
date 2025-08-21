@@ -1,0 +1,381 @@
+ *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+      
+  .container {
+  background-color:#e5e5e5;
+  width: 18rem;
+  padding: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  max-width: 100%;
+  width: 100%;
+  max-width: 320px; 
+  height: auto;
+  padding: 1rem;
+  margin: auto;
+
+} 
+
+body, html {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* full viewport height */
+  background-color: #ffffff; /* optional: page background */
+}
+
+.name {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.name h3 {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.name p {
+  font-size: 0.8rem;
+  color:white;
+  margin: 2px 0;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+ .top-body {
+  background-color:#023e8a;
+  padding: 0.5rem;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 10rem; /* increased height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+
+.solar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.solar {
+  background-color: black;
+  height: 2rem;
+  width: 8rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.solar div {
+  flex: 1;
+  border-right: 1px solid rgba(255, 255, 255, 0.893);
+}
+
+.solar div:last-child {
+  border-right: none;
+}
+
+.solar-label {
+  font-size: 0.7rem;
+  color:white;
+  margin-top: 0.2rem;
+}
+
+.smallscreen {
+  background-color:#668877;
+  height: 6rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  text-align: left;   
+  padding: 0.5rem;
+  border: 2px inset #ccc;
+  color: #003366;
+  display: flex;       
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.expression {
+  font-size: 1rem;
+  text-align: left;
+  color: #003366;
+  min-height: 1.2rem;
+}
+
+.result {
+  font-size: 1.5rem;
+  text-align: right;
+  color: #003366;
+  min-height: 1.8rem;
+  margin-top: auto;
+}
+
+.cursor {
+  display: inline;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+ .keys button {
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  color: #023e8a;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-plus {
+  grid-row: span 2;
+  height: 100%; /* ensures it fills both rows */
+  background-color: #fff;
+  font-size: 1.2rem;
+}
+
+.keys button:hover {
+  background-color: #d0eaff;
+}
+
+#largebtn{
+  height: 80px;
+  width:80px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* was 5 */
+  gap: 0.4rem;
+  margin-top: 0.1rem;
+}
+
+ .round-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.roundbtn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color:grey;
+  border: 1px solid #333;
+  font-size: 0.7rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+}
+
+.roundbtn:hover{
+background-color: rgb(150, 149, 149);
+}
+
+#text{
+  font-size: 6px;
+  color: rgb(168, 38, 60);
+}
+
+.dpad {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: auto;
+}
+
+.dpad div {
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color:grey;
+  border: 1px solid #333;
+  border-radius: 3px;
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.dpad .center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dpad .up {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dpad .down {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dpad .left {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dpad .right {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.alpha{
+  margin-left: 1.5rem;
+}
+
+.mode{
+  margin-right: 1.5rem;
+}
+
+.counting{
+  background-color: #023e8a !important;
+  color: white !important;
+}
+
+.counting:hover{
+background-color: #245da9 !important;
+}
+
+.del{
+   color: #023e8a;
+  background-color:yellow;
+}
+
+.del:hover{
+  background-color: rgb(242, 242, 127) !important;
+}
+
+/* Animation for CASIO text */
+.casio-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #668877;
+  z-index: 10;
+}
+
+.casio-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #003366;
+  opacity: 0;
+  animation: casioFade 2s ease-in-out;
+}
+
+@keyframes casioFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(1);
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  .keys {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.3rem;
+  }
+
+  .keys button {
+    font-size: 0.8em;
+    padding: 0.6em;
+  }
+
+  .smallscreen {
+    font-size: 1.2rem;
+    height: 5rem;
+  }
+
+  .roundbtn {
+    width: 16px;
+    height: 16px;
+  }
+
+  .dpad {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .dpad div {
+    width: 0.6rem;
+    height: 0.6rem;
+    font-size: 0.5rem;
+  }
+  
+  .casio-text {
+    font-size: 2rem;
+  }
+}
