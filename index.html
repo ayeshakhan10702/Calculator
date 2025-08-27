@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+  <!-- Name and specifications -->
+    <div class="wrapper">
+  <div class="container">
+  <div class="top-body">
+    <div class="top-section">
+      <div class="name">
+        <h3>CASIO</h3>
+        <p>fx-991ES PLUS</p>
+        <p>NATURAL-V.P.A.M</p>
+      </div>
+<!-- Solar pannel -->
+      <div class="solar-wrapper">
+        <div class="solar">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <p class="solar-label">TWO WAY POWER</p>
+      </div>
+    </div>
+<!-- Small Screen -->
+    <div class="smallscreen" id="smallscreen">
+      <div class="expression" id="expression"></div>
+      <div class="result" id="result"></div>
+      <div class="casio-animation" id="casioAnimation" style="display: none;">
+        <div class="casio-text">CASIO</div>
+      </div>
+    </div>
+  </div>
+<!-- Round keys -->
+  <div class="round-row">
+  <span id="text">SHIFT <button class="roundbtn"></button></span>
+  <span id="text" class="alpha"> ALPHA<button class="roundbtn"></button></span>
+ <div class="dpad">
+  <div class="up">▲</div>
+  <div class="left">◀</div>
+  <div class="center">●</div>
+  <div class="right">▶</div>
+  <div class="down">▼</div>
+</div>
+  <span id="text" class="mode"> MODE<button class="roundbtn"></button></span>
+  <span id="text">ON<button class="roundbtn" id="onButton"></button></span>
+</div>
+<!-- keys -->
+  <div class="keys">
+    <button>CALC</button>
+    <button><i class="fa-solid fa-square-root-variable"></i></button>
+    <button><i class="fa-solid fa-percent"></i></button>
+    <button>log</button>
+    <button>MC</button>
+    <button>MR</button>
+    <button>sin</button>
+    <button>cos</button>
+     <button>tan</button>
+    <button>TAX+</button>
+    <button>M+</button>
+    <button>M- </button>
+    <button>()</button>
+    <button><i class="fa-solid fa-divide"></i></button>
+    <button class="del">AC</button>
+    <button class="del">DEL</button>
+    <button class="counting">7</button>
+    <button class="counting">8</button>
+    <button class="counting">9</button>
+    <button><i class="fa-solid fa-xmark"></i></button>
+    <button class="counting">4</button>
+    <button class="counting">5</button>
+    <button class="counting">6</button>
+    <button><i class="fa-solid fa-minus"></i></button>
+    <button class="counting">1</button>
+    <button class="counting">2</button>
+    <button class="counting">3</button>
+   <button class="btn-plus"><i class="fa-solid fa-plus"></i></button>
+    <button class="counting">0</button>
+    <button class="counting">.</button>
+    <button>=</button>
+    </div>        
+    </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
